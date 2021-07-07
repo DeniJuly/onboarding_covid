@@ -1,6 +1,7 @@
 # covid_onboarding
-
+![alt text](https://github.com/DeniJuly/onboarding_covid/blob/master/assets/Thumbnail.png?raw=true)
 On Boarding covid
+Design by Faiz@chitranu.com
 
 ## Getting Started
 

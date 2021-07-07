@@ -82,6 +82,18 @@ class _OnBoardingState extends State<OnBoarding> {
     });
   }
 
+  _checkSize(int index) {
+    if ((index - _currentPage) == 0) {
+      return 16.0;
+    } else if ((index - _currentPage) == 1 || (index - _currentPage) == -1) {
+      return 14.0;
+    } else if ((index - _currentPage) == 2 || (index - _currentPage) == -2) {
+      return 10.0;
+    } else {
+      return 8.0;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,8 +125,8 @@ class _OnBoardingState extends State<OnBoarding> {
                 children: List.generate(_pages.length, (index) {
                   return AnimatedContainer(
                     duration: Duration(milliseconds: 300),
-                    height: 10,
-                    width: (index == _currentPage) ? 30 : 10,
+                    height: _checkSize(index),
+                    width: _checkSize(index),
                     margin: EdgeInsets.symmetric(horizontal: 5, vertical: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -133,16 +145,16 @@ class _OnBoardingState extends State<OnBoarding> {
                 },
                 child: AnimatedContainer(
                   duration: Duration(milliseconds: 300),
-                  height: 50,
-                  width: (_currentPage == (_pages.length - 1)) ? 200 : 50,
+                  height: 56,
+                  width: (_currentPage == (_pages.length - 1)) ? 120 : 56,
                   decoration: BoxDecoration(
-                      color: black900, borderRadius: BorderRadius.circular(10)),
+                      color: black900, borderRadius: BorderRadius.circular(16)),
                   child: (_currentPage == (_pages.length - 1))
                       ? Center(
                           child: Text(
-                            'Stay Save',
+                            'Thank You!',
                             style: GoogleFonts.poppins(
-                                color: Colors.white, fontSize: 18),
+                                color: Colors.white, fontSize: 16),
                           ),
                         )
                       : Icon(
