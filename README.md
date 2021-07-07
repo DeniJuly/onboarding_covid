@@ -1,5 +1,10 @@
 # covid_onboarding
-![alt text](https://github.com/DeniJuly/onboarding_covid/blob/master/assets/Thumbnail.png?raw=true)
+<img
+src=“https://github.com/DeniJuly/onboarding_covid/blob/master/assets/Thumbnail.png”
+raw=true
+alt=“thumbnail”
+style=“margin-right: 10px;”
+/>
 On Boarding covid
 Design by Faiz@chitranu.com
 
