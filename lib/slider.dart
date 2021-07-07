@@ -16,7 +16,7 @@ class SliderPage extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           Image.asset(
             image,
